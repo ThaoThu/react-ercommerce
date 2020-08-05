@@ -1,0 +1,232 @@
+
+@import './layout.scss';
+@import "ie-fix";
+$main-orange : #FFA801;
+$main-gray : #CECECE;
+$white : #fff;
+$main-blue : #042954;
+$dark-blue:  #051F3E;
+$bg-gray :  #E5E5E5;
+
+$fontSizeXL: 2.2rem;
+$fontSizeL: 1.6rem;
+$fontSizeM: 1.4rem;
+$fontSizeS: 1.2rem;
+
+.align-center{
+    display: flex;
+    align-items: center;
+}
+.app{
+    .common-option{
+        img:not(:first-child){
+            margin-left: 2rem;
+        }
+    }
+    .app-header{
+        .navbar-toggler:hover .navbar-toggler-icon {
+            background-image: url('../../icons/menu.svg');
+            width: 3rem;
+        }
+       .navbar-toggler-icon{
+        background-image: url('../../icons/menu.svg');
+        width: 3rem;
+       }
+    } 
+    button:focus {
+        outline: 1px dotted;
+        outline: 0px auto -webkit-focus-ring-color;
+    }
+
+    .sidebar{
+        width: 26rem;
+        .nav{
+            width: 25rem;
+            padding-top: 1rem;
+        }
+        .nav-dropdown.open .nav-link.disabled {
+            opacity: 0.5;
+        }  
+        //icon
+        .icon-menu1{
+            background: url('../../imgs/menu.png');
+            height: 27px;
+            width: 27px;
+        }
+        .icon-dot{
+            background: url('../../imgs/b-dot.png');
+            height: 27px;
+        }
+    
+        .icon-mail{
+            background: url('../../imgs/mail.png');
+            height: 27px;
+        }
+        .icon-cap{
+            background: url('../../imgs/cap.png');
+            height: 27px;
+        }
+        .icon-speed{
+            background: url('../../imgs/speed.png');
+            height: 27px;
+        }
+        .icon-student{
+            background: url('../../imgs/student.png');
+            height: 27px;
+        }
+        .icon-news{
+            background: url('../../imgs/news.png');
+            height: 27px;
+        }
+        .icon-home1{
+            background: url('../../imgs/home.png');
+            height: 27px;
+        }
+        background-color: $main-blue;
+        .nav-link.active,.nav-link,.sidebar-minimizer,.sidebar .nav{
+            background: $main-blue
+        }
+    
+        .nav-dropdown .nav-link.active{
+            background-color: $dark-blue;
+            color: #FFA801 !important;
+        }
+        .nav .nav-item > .nav-link.active{
+            font-weight: 500;
+        }
+        .nav-dropdown-items {
+            background-color: $dark-blue;
+            
+            .nav-link{
+
+                background-color: $dark-blue;
+                &:hover{
+                    background-color: $dark-blue;
+                }
+            }
+        }
+        .nav-link{
+            font-size: $fontSizeM;
+            line-height: 1.9rem;
+            color: $main-gray;
+            font-weight: 300;    
+             @extend .align-center;
+          
+            &:hover{
+                background-color: $main-blue;
+                font-weight: 500;
+            }
+            .nav-icon{
+                margin-right: 10px;
+                width: 27px!important;
+                background-position: center center; 
+                background-repeat: no-repeat;
+            }
+        }
+        .nav-dropdown-toggle::before{
+            background-image: url('../../imgs/left-arrow-w.png');
+            width: 6px;
+            height: 12px;
+        }
+        .nav-link:hover.nav-dropdown-toggle::before {
+            background-image: url('../../imgs/left-arrow.png');
+            width: 12px;
+            height: 6px;
+        }
+        .nav-dropdown.open > .nav-dropdown-toggle::before {
+            background-image: url('../../imgs/left-arrow.png');
+            width: 12px;
+            height: 6px;
+            transform: rotate(3deg);
+        }
+        .nav-dropdown.open .nav-dropdown-items .nav-link {
+            font-weight: 300;
+            color: $main-gray;
+            &:hover{
+                color: $main-orange;
+                .icon-dot {
+                    background: url('../../imgs/dot.png');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+            }
+        }
+    
+    }
+    //main
+    .main{
+        //padding: 3rem 0;
+        .container-fluid{
+            // height: 100%;
+            padding: 0;
+            // background-color: $white;
+        }
+    }
+    .main{
+        background-color: #fff;
+    }
+    .newlayout-form{
+        background-color: $bg-gray;
+    }
+    .app-footer{
+        background-color:#004266;
+       
+        border-top:none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 80px;
+        a{
+            color : #fff
+        }
+
+    }
+    .app-header{
+        height: 60px;
+        .nav-item button {
+            margin: 0 auto;
+            font-size: $fontSizeM;
+        }
+    }
+    .brand-box{
+        display: flex;
+        background: $main-orange;
+        width: 26rem;
+        align-items: center;
+        .app-name{
+            font-weight: 500;
+            font-size: $fontSizeXL;
+            line-height: 2.6rem;
+            color:#fff;
+            padding-left: 2rem;
+            margin-bottom: 0;
+            width: 20rem;
+        }
+        .navbar-toggler-icon {
+            width: 2.5em;
+        }
+        
+    }
+
+    .sidebar .nav-dropdown.open > .nav-link {
+        font-weight: 500;
+    } 
+    
+}
+.sidebar
+html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .main, html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .app-footer, html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .main, html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .app-footer {
+    margin-left: 27rem;
+}
+.invalid-feedback{
+    font-size:  $fontSizeM;
+}
+
+
+.react-checkbox-tree.rct-icons-fa4 ol:first-child{
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        width: 50%;
+        margin: 5px 0;
+    }
+}

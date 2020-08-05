@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+    app:
+        image: 'gcr.io/ninth-quarter-258309/campus-junior-fe:latest'
+        ports:
+            - "8080:3000"
+        restart: always
